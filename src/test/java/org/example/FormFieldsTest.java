@@ -27,6 +27,5 @@ public class FormFieldsTest extends BaseTest {
                 .getAlertText();
 
         Assert.assertEquals(alertText, EXPECTED_ALERT_TEXT);
-
     }
 }
