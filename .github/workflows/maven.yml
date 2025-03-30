@@ -25,9 +25,6 @@ jobs:
       - run: |
           ${{ steps.setup-chrome.outputs.chrome-path }} --version    
 
-      - name: Build with Maven
-        run: mvn clean install -DskipTests=false
-
       - name: Run tests with Maven
         run: mvn test
 
