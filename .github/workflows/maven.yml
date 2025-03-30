@@ -27,7 +27,7 @@ jobs:
           install-chromedriver: true
 
       - name: Run tests with Maven
-        run: mvn test
+        run: mvn clean test
 
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
