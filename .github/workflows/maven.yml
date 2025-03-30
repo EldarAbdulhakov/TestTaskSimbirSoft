@@ -23,7 +23,6 @@ jobs:
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 134
           install-chromedriver: true
 
       - name: Run tests with Maven
