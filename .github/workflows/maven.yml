@@ -19,13 +19,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'corretto'
+
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: 134
-
-      - name: Build with Maven
-        run: mvn clean install
+          install-chromedriver: true
 
       - name: Run tests with Maven
         run: mvn test
