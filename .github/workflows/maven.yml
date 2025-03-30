@@ -20,11 +20,16 @@ jobs:
           java-version: '17'
           distribution: 'corretto'
 
-      - name: Start selenoid
-        uses: Xotabu4/selenoid-github-action@v2
+      - uses: browser-actions/setup-chrome@v1
+        id: setup-chrome
+      - run: |
+          ${{ steps.setup-chrome.outputs.chrome-path }} --version    
+
+      - name: Build with Maven
+        run: mvn clean install -DskipTests=false
 
       - name: Run tests with Maven
-        run: mvn clean test
+        run: mvn test
 
       - name: Load test report history
         uses: actions/checkout@v3
