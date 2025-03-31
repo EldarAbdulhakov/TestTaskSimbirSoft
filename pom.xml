@@ -51,7 +51,7 @@
                     </argLine>
                     <systemPropertyVariables>
                         <!-- Устанавливаем параметр headless для Selenium -->
-                        <headless>true</headless>
+                        <headless>false</headless>
                     </systemPropertyVariables>
                 </configuration>
                 <dependencies>
