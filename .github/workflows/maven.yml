@@ -23,7 +23,7 @@ jobs:
       - name: Run tests with Maven
         run: mvn test
         env:
-          CHROME_OPTIONS: --headless
+          CHROME_OPTIONS: --headless=new
 
 
       - name: Load test report history
