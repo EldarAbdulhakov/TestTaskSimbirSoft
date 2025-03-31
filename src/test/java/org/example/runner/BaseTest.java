@@ -22,9 +22,18 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-            driver = new ChromeDriver();
+        try {
+            boolean headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
+            ChromeOptions options = new ChromeOptions();
+            if (headless) {
+                options.addArguments("--headless");
+            }
+            driver = new ChromeDriver(options);
             driver.manage().window().setSize(new Dimension(1920, 1080));
             getDriver().get("https://practice-automation.com/form-fields/");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     protected WebDriverWait getWait10() {
