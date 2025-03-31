@@ -53,6 +53,9 @@
                         <!-- Устанавливаем параметр headless для Selenium -->
                         <headless>false</headless>
                     </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
