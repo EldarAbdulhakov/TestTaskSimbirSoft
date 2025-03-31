@@ -1,5 +1,6 @@
 package org.example.page;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -63,42 +64,50 @@ public class MainPage {
         return wait10;
     }
 
+    @Step("inputName")
     public MainPage inputName(String name) {
         nameField.sendKeys(name);
         return this;
     }
 
+    @Step("inputPassword")
     public MainPage inputPassword(String password) {
         passwordField.sendKeys(password);
         return this;
     }
 
+    @Step("chooseMilk")
     public MainPage chooseMilk() {
         milk.click();
         return this;
     }
 
+    @Step("chooseCoffee")
     public MainPage chooseCoffee() {
         coffee.click();
         return this;
     }
 
+    @Step("chooseYellow")
     public MainPage chooseYellow() {
         yellow.click();
         return this;
     }
 
+    @Step("selectOne")
     public MainPage selectOne() {
         Select select = new Select(selector);
         select.selectByIndex(1);
         return this;
     }
 
+    @Step("inputEmail")
     public MainPage inputEmail(String email) {
         emailField.sendKeys(email);
         return this;
     }
 
+    @Step("inputInstrumentCount")
     public MainPage inputInstrumentCount() {
         List<WebElement> instrumentsList = instruments;
 
@@ -113,6 +122,7 @@ public class MainPage {
         return this;
     }
 
+    @Step("clickSubmit")
     public MainPage clickSubmit() {
         Actions actions = new Actions(getDriver());
         actions
@@ -122,6 +132,7 @@ public class MainPage {
         return this;
     }
 
+    @Step("getAlertText")
     public String getAlertText() {
         getWait10().until(ExpectedConditions.alertIsPresent());
         return getDriver().switchTo().alert().getText();
