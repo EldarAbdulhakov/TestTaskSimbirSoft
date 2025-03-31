@@ -21,9 +21,9 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless");
+        driver = new ChromeDriver();
         driver.manage().window().setSize(new Dimension(1920, 1080));
         getDriver().get("https://practice-automation.com/form-fields/");
     }
