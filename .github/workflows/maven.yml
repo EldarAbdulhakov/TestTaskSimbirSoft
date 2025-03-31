@@ -21,10 +21,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Run tests with Maven
-        run: mvn test
-        env:
-          CHROME_OPTIONS: --headless=new
-
+        run: mvn test -Dheadless=true
 
       - name: Load test report history
         uses: actions/checkout@v3

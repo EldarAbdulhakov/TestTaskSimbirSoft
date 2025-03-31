@@ -49,10 +49,10 @@
                         -Dfile.encoding=UTF-8
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
-<!--                    <systemPropertyVariables>-->
-<!--                        &lt;!&ndash; Устанавливаем параметр headless для Selenium &ndash;&gt;-->
-<!--                        <headless>false</headless>-->
-<!--                    </systemPropertyVariables>-->
+                    <systemPropertyVariables>
+                        <!-- Устанавливаем параметр headless для Selenium -->
+                        <headless>false</headless>
+                    </systemPropertyVariables>
                 </configuration>
                 <dependencies>
                     <dependency>
