@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Mar 31 16:59:11 GMT 2025","Mon Mar 31 16:59:12 GMT 2025","1320","Surefire suite","Surefire test","org.example.FormFieldsTest","org.example.FormFieldsTest","testFormFields","testFormFields",""
